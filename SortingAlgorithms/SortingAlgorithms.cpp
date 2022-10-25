@@ -18,27 +18,35 @@ void Display(vector<float> values);
 int main()
 {
 	srand((time(0)));
-	numbers.reserve(20);
-	//memset(numbers, static_cast <float>(rand()), 10000);
-	//std::fill(std::begin(numbers), std::end(numbers), static_cast <float>(rand()));
-	
-	for  (int i = 0; i < numbers.capacity();i++)
-	{
-		float val = static_cast <float>(rand() % numbers.capacity());
-		numbers.emplace_back(val);
-	}
+	//numbers.reserve(10);
 	/*
-	vector<float> values = { 5., 2., 8., 1., 4., 3., 7., 6. };
+	for  (int i = 0; i < 10;i++)
+	{
+		float val = static_cast <float>(rand() %10);
+		numbers.emplace_back(val);
+	}*/
+	
+	//vector<float> values = { 5., 2., 8., 1., 4., 3., 7., 6. };
+	vector<float> values = {2., 2, 4., 9., 8., 1. ,5.};
 	for (int i = 0; i < values.size(); i++)
 	{
 		numbers.emplace_back(values[i]);
-	}*/
-	Display(numbers);
-	std::cout << "End" << std::endl;
-	QuickSort::QuickSortVector(&numbers);
+	}
 	//Display(numbers);
+	//std::cout << "End" << std::endl;
+	cout << "Liste de base: ";
+	Display(numbers);
 
+	QuickSort::QuickSortVector(&numbers, 0, numbers.size() - 1);
 
+	std::bitset binaryValue;
+	int gapValue = 0;
+	bool checking = false;
+	std::set<int> gapsValues;
+
+	std::string val = binaryValue.to_string()
+
+	for (size_t i = 0, i < val.siaz)
 
 
 }
@@ -50,5 +58,5 @@ void Display(vector<float> values)
 	{
 		std::cout << values[i] << " ";
 	}
-	std::cout << std::endl;
+	std::cout << std::endl << std::endl;
 }

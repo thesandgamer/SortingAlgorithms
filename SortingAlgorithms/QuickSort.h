@@ -10,8 +10,9 @@ using std::endl;
 class QuickSort
 {
 public :
-	static void QuickSortVector(vector<float>* numbers);
+	static void QuickSortVector(vector<float>* numbers, int startPoint,int pivotIndex);
 
+	static void DisplayQuickSort(vector<float>* numbers, int pivotIndex);
 
 
 
